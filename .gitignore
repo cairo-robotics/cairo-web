@@ -1,3 +1,9 @@
+### Project Specific ###
+
+/staticfiles/
+
+
+
 ### OSX ###
 .DS_Store
 .AppleDouble
