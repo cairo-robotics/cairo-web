@@ -1,2 +1,2 @@
-# lfd-rosbrdige
-Connecting to the LFD project via rosbridge-suite.
+# Cairo-web
+Web API and interface for connecting with Cairo Lab ROS processes via rosbridge-suite.
