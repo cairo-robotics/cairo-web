@@ -27,7 +27,7 @@ var triggerPub = new ROSLIB.Topic({
 });
 
 var bool = new ROSLIB.Message({data : true});
-console.log(trigger)
+console.log(bool)
 triggerPub.subscribe(function(){
   console.log("Published!")
 })
