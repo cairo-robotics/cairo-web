@@ -26,12 +26,12 @@ var triggerPub = new ROSLIB.Topic({
   messageType : 'std_msgs/Bool'
 });
 
-var trigger = new ROSLIB.Message({data : true});
+var bool = new ROSLIB.Message({data : true});
 console.log(trigger)
 triggerPub.subscribe(function(){
   console.log("Published!")
 })
-triggerPub.publish(trigger);
+triggerPub.publish(bool);
 
 // Subscribing to a Topic
 // ----------------------
