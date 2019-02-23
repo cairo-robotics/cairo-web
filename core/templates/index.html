@@ -3,31 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    
     {% load static %}
     <script type="text/javascript"
     src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/annyang.min.js'}"></script>
     <script type="text/javascript" src="{% static 'js/cairo_web_rosbridge.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/cairo_web.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/navbar-fixed-top.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cairo_web.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+      <!-- Custom styles for this template -->
+      <link href="navbar-fixed-top.css" rel="stylesheet">
     </head>
     <body>
+      <!-- A grey horizontal navbar that becomes vertical on small screens -->
+      <nav class="navbar navbar-expand-sm bg-light">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+      
       <h1>Project 1 UI programming</h1>
       <p>Check your Web Console for output.</p>
       <p>Our UI interacts with both mouse and voice!</p>
@@ -49,23 +68,13 @@
               <span class="slider"></span>
             </label>
           </div>
-        <div class="col-md-4">
-          <p>Triggers</p>
-          <label class="switch">
-            <input type="button" id="button1">
-            <span class="slider"></span>
-          </label>
-          <label class="switch">
-            <input type="button" id="button2">
-            <span class="slider"></span>
-          </label>
-          <label class="switch">
-            <input type="button" id="button3">
-            <span class="slider"></span>
-          </label>
+          <div class="col-md-4">
+            <p>Triggers</p>
+            <button type="button" class="btn btn-primary">Trigger 1</button>
+            <button type="button" class="btn btn-primary">Trigger 2</button>
+            <button type="button" class="btn btn-primary">Trigger 3</button>
+          </div>
         </div>
       </div>
-    </div>
-  </body>
-</html>
-<!--C:\Users\Ben\Desktop\HCI\cairo-web-->
+    </body>
+  </html>
