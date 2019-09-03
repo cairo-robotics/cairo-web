@@ -13,9 +13,9 @@
     <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/cairo_web_rosbridge.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/cairo_voice.js' %}"></script>
+<!--     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+ -->    <script type="text/javascript" src="{% static 'js/cairo_web_rosbridge.js' %}"></script>
+<!--     <script type="text/javascript" src="{% static 'js/cairo_voice.js' %}"></script> -->
     <script type="text/javascript" src="{% static 'js/cairo_web.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/cairo_web.css' %}">
@@ -69,12 +69,11 @@
     <div class="containter" id="bigMama">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Project 1: UI Programming</h1>
-                <p class="lead">Our UI interacts with both mouse and voice!</p>
+                <h1 class="display-4">Learning from Demonstration Interface</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Demonstration Constraints</h5>
@@ -86,19 +85,11 @@
                           <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="sm" data-on="Height Active" data-off="Height Inactive">
                         </div>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="sm" data-on="Perimeter Active" data-off="Perimeter Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="sm" data-on="Over Under Active" data-off="Over Under Inactive">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Demonstration Triggers</h5>
-                        <p class="card-text">Select or Use Voice commands during demonstration.</p>
-                        <button type="submit" class="btn btn-primary" id='button1'>Skill Segment</button>
-                        <button type="submit" class="btn btn-primary" id='button2'>Pouring</button>
-                        <button type="submit" class="btn btn-primary" id='button3'>Pick-and-Place</button>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="sm" data-on="Perimeter Active" data-off="Perimeter Inactive">
+                        </div>
                     </div>
                 </div>
             </div>
