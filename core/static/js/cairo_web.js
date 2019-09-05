@@ -3,7 +3,7 @@ function sleep (time) {
 }
 
 var ros = new ROSLIB.Ros({
-  url : 'ws://localhost:8080'
+  url : 'ws://192.168.50.133:9090'
 });
 
 ros.on('connection', function() {
@@ -75,15 +75,15 @@ $(document).ready(function() {
               name : '/over_under_constraint',
               messageType : 'std_msgs/Bool',
             });
-            var bool = new ROSLIB.Message({data : true});
+            var bool = new ROSLIB.Message({data : false});
             triggerPub1.publish(bool);   
           }
     });
-    $('input[id=toggle3]').change(function() {
+    $('input[id=toggle4]').change(function() {
       if ($('input[id="toggle4"]').prop('checked') == true){
         var triggerPub1 = new ROSLIB.Topic({
             ros : ros,
-            name : '/over_under_constraint',
+            name : '/perimeter_constraint',
             messageType : 'std_msgs/Bool',
           });
           var bool = new ROSLIB.Message({data : true});
@@ -92,10 +92,10 @@ $(document).ready(function() {
       if ($('input[id="toggle4"]').prop('checked') == false){
         var triggerPub1 = new ROSLIB.Topic({
             ros : ros,
-            name : '/over_under_constraint',
+            name : '/perimeter_constraint',
             messageType : 'std_msgs/Bool',
           });
-          var bool = new ROSLIB.Message({data : true});
+          var bool = new ROSLIB.Message({data : false});
           triggerPub1.publish(bool);   
         }
     });

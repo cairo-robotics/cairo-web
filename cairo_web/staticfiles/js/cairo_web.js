@@ -3,7 +3,7 @@ function sleep (time) {
 }
 
 var ros = new ROSLIB.Ros({
-  url : 'ws://localhost:9090'
+  url : 'ws://192.168.50.133:9090'
 });
 
 ros.on('connection', function() {
@@ -23,7 +23,7 @@ $(document).ready(function() {
         if ($('input[id="toggle1"]').prop('checked') == true){
             var triggerPub1 = new ROSLIB.Topic({
               ros : ros,
-              name : '/mock_trigger_1',
+              name : '/upright_constraint',
               messageType : 'std_msgs/Bool',
             });
             var bool = new ROSLIB.Message({data : true});
@@ -32,7 +32,7 @@ $(document).ready(function() {
         if ($('input[id="toggle1"]').prop('checked') == false){
             var triggerPub1 = new ROSLIB.Topic({
               ros : ros,
-              name : '/mock_trigger_1',
+              name : '/upright_constraint',
               messageType : 'std_msgs/Bool',
             });
             var bool = new ROSLIB.Message({data : false});
@@ -41,19 +41,63 @@ $(document).ready(function() {
     });
     $('input[id=toggle2]').change(function() {
         if ($('input[id="toggle2"]').prop('checked') == true){
-          alert("Sending Height Active  data!")    
+          var triggerPub1 = new ROSLIB.Topic({
+              ros : ros,
+              name : '/height_constraint',
+              messageType : 'std_msgs/Bool',
+            });
+            var bool = new ROSLIB.Message({data : true});
+            triggerPub1.publish(bool);
           }
         if ($('input[id="toggle2"]').prop('checked') == false){
-          alert("No longer sending Height Active data!")    
+          var triggerPub1 = new ROSLIB.Topic({
+              ros : ros,
+              name : '/height_constraint',
+              messageType : 'std_msgs/Bool',
+            });
+            var bool = new ROSLIB.Message({data : false});
+            triggerPub1.publish(bool);
           }
     });
     $('input[id=toggle3]').change(function() {
         if ($('input[id="toggle3"]').prop('checked') == true){
-          alert("Sending Perimeter Active data!")    
+          var triggerPub1 = new ROSLIB.Topic({
+              ros : ros,
+              name : '/over_under_constraint',
+              messageType : 'std_msgs/Bool',
+            });
+            var bool = new ROSLIB.Message({data : true});
+            triggerPub1.publish(bool);
           }
         if ($('input[id="toggle3"]').prop('checked') == false){
-          alert("No longer sending Perimeter Active data!")    
+          var triggerPub1 = new ROSLIB.Topic({
+              ros : ros,
+              name : '/over_under_constraint',
+              messageType : 'std_msgs/Bool',
+            });
+            var bool = new ROSLIB.Message({data : false});
+            triggerPub1.publish(bool);   
           }
+    });
+    $('input[id=toggle4]').change(function() {
+      if ($('input[id="toggle4"]').prop('checked') == true){
+        var triggerPub1 = new ROSLIB.Topic({
+            ros : ros,
+            name : '/perimeter_constraint',
+            messageType : 'std_msgs/Bool',
+          });
+          var bool = new ROSLIB.Message({data : true});
+          triggerPub1.publish(bool);
+        }
+      if ($('input[id="toggle4"]').prop('checked') == false){
+        var triggerPub1 = new ROSLIB.Topic({
+            ros : ros,
+            name : '/perimeter_constraint',
+            messageType : 'std_msgs/Bool',
+          });
+          var bool = new ROSLIB.Message({data : false});
+          triggerPub1.publish(bool);   
+        }
     });
      $('button[id=button1]').click(function() {
         $(this).attr('active', true);

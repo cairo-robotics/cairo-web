@@ -53,5 +53,6 @@ $(document).ready(function() {
         annyang.debug()
         // Start listening. You can call this here, or attach this call to an event, button, etc.
         annyang.start({ continuous: false });
+        console.log(annyang)
     }
 });
