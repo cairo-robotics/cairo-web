@@ -23,14 +23,24 @@ $(document).ready(function() {
                 $('input[id="toggle2"]').prop('checked', false).trigger('change');
               };
             },
-            'perimeter on': function() {
+            'over under on': function() {
               if ($('input[id="toggle3"]').prop('checked') == false){
                 $('input[id="toggle3"]').prop('checked', true).trigger('change');
               };
             },
-            'perimeter off': function() {
+            'over under off': function() {
               if ($('input[id="toggle3"]').prop('checked') == true){
                 $('input[id="toggle3"]').prop('checked', false).trigger('change');
+              };
+            },
+            'perimeter on': function() {
+              if ($('input[id="toggle4"]').prop('checked') == false){
+                $('input[id="toggle4"]').prop('checked', true).trigger('change');
+              };
+            },
+            'perimeter off': function() {
+              if ($('input[id="toggle4"]').prop('checked') == true){
+                $('input[id="toggle4"]').prop('checked', false).trigger('change');
               };
             },
             'segment': function() {

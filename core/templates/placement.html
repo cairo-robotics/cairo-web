@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block head_css_page %}
+    <link rel="stylesheet" href="{{ static('css/cairo_web.css') }}">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+{% endblock head_css_page %}
+{% block jumbotron %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Placement Task</h1>
+            <p class="lead">In this task, you will demonstrate to the robot how place a lid onto a designated a square.</p>
+        </div>
+    </div>
+{% endblock jumbotron %}
+{% block content %}  
+   <div class="containter" id="bigMama">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Upright Constraint</h5>
+                        <p class="card-text">Restricts the cup to be held upright accordin to a predetermined orientation.</p>        
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Upright Active" data-off="Upright Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#uprightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="uprightExample">
+                            <div class="card card-body">
+                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Height Constraint</h5>
+                        <p class="card-text">Restricts the cup to be held above a pre-determined height.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#heightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="heightExample">
+                            <div class="card card-body">
+                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Over Under Constraint</h5>
+                        <p class="card-text">Restricts and object to be above the centerline of another object.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnderExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="overUnderExample">
+                            <div class="card card-body">
+                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Perimeter Constraint</h5>
+                        <p class="card-text">Restricts the end-effector / object to within a perimeter band.</p>
+                    </div>
+                    <div class="card-body">
+                                                <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="lg" data-on="Perimeter Active" data-off="Perimeter Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#perimeterExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="perimeterExample">
+                            <div class="card card-body">
+                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block footer_javascript_page %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+{#     <script type="text/javascript" src="{{ static('js/cairo_web_rosbridge.js') }}"></script>
+ #}    
+    <script type="text/javascript" src="{{ static('js/cairo_voice.js') }}"></script>
+    <script type="text/javascript" src="{{ static('js/cairo_web.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+{% endblock footer_javascript_page %}

@@ -1,0 +1,100 @@
+{# HTML5 declaration #}
+<!DOCTYPE html>
+<html>
+{# Make modifiable head elements #} 
+<head>
+    <title>{% block title %}{% endblock title %} | UI Project</title>
+    {% block head_favicon %}
+        <link rel="icon" type="image/png">
+    {% endblock head_favicon %}
+    {% block head_meta %}
+        {% block head_meta_charset %}
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {% endblock head_meta_charset %}
+        {% block head_meta_contentlanguage %}
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        {% endblock head_meta_contentlanguage %}
+        {% block head_meta_viewport %}
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% endblock head_meta_viewport %}
+        {% block head_meta_misc %}
+            <meta name="description" content="">
+            <meta name="author" content="">
+            <link rel="icon" href="../../favicon.ico">
+        {% endblock head_meta_misc %}
+    {% endblock head_meta %}
+    {% block head_css %}
+        {% block head_css_site %}
+             <!-- Style dependencies for this template -->
+            <link rel="stylesheet" href="{{ static('css/bootstrap.css') }}">
+            <!-- Custom styles for this template -->
+            <link rel="stylesheet" href="{{ static('css/navbar.css') }}">
+        {% endblock head_css_site %}
+        {% block head_css_section %}{% endblock head_css_section %}
+        {% block head_css_page %}{% endblock head_css_page %}
+    {% endblock head_css %}
+</head>
+
+<body>
+    {# Navigation Menu #}
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">UI Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('home') }}">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('about') }}">About the Study</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Tasks
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ url('pouring') }}">Pouring</a>
+                      <a class="dropdown-item" href="{{ url('placement') }}">Placement</a>
+                      <a class="dropdown-item" href="{{ url('perimeter') }}">Perimeter</a>
+                    </div>
+                  </li>
+
+                </ul>
+                            <!--     <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+            </div>
+        </nav>
+    </header>
+    {# The Document Body #}
+    <div id="site-wrapper">
+        {% block jumbotron %}{% endblock jumbotron %}
+        {% block content %}
+        if you see this, something is wrong!
+        {% endblock content %}
+    </div>
+    {# The Footer #}
+    <div class="footer">
+        <div class="container"></div>
+    </div>
+</body>
+{# Set of blocks that can be used to display JavaScript files #}
+{% block footer_javascript %}
+    {% block footer_javascript_site %}
+        <!-- Script dependencies for this template -->
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{{ static('js/bootstrap.js') }}"></script>
+        <!-- Custom scripts for this template -->
+    {% endblock footer_javascript_site %}
+    {% block footer_javascript_section %}{% endblock footer_javascript_section %}
+    {% block footer_javascript_page %}{% endblock footer_javascript_page %}
+{% endblock footer_javascript %}
+
+</html>

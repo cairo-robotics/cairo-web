@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block head_css_page %}
+    <link rel="stylesheet" href="{{ static('css/cairo_web.css') }}">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+{% endblock head_css_page %}
+{% block jumbotron %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Robot Learning from Demonstration</h1>
+            <p class="lead">This study will be used to compare three Robot Learning from Demonstration algorithms.</p>
+        </div>
+    </div>
+{% endblock jumbotron %}
+{% block content %}  
+{% endblock content %}
+{% block footer_javascript_page %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+{% endblock footer_javascript_page %}
