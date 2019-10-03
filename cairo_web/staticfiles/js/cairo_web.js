@@ -18,85 +18,86 @@ ros.on('close', function() {
   console.log('Connection to websocket server closed.');
 });
 
+
+function orientationPublisher(boolean){
+  var triggerPub1 = new ROSLIB.Topic({
+    ros : ros,
+    name : '/orientation_constraint',
+    messageType : 'std_msgs/Bool',
+  });
+  var bool = new ROSLIB.Message({data : boolean});
+  triggerPub1.publish(bool);
+}
+
+
+function heightPublisher(boolean){
+  var triggerPub1 = new ROSLIB.Topic({
+    ros : ros,
+    name : '/height_constraint',
+    messageType : 'std_msgs/Bool',
+  });
+  var bool = new ROSLIB.Message({data : boolean});
+  triggerPub1.publish(bool);
+}
+
+function overUnderPublisher(boolean){
+  var triggerPub1 = new ROSLIB.Topic({
+    ros : ros,
+    name : '/over_under_constraint',
+    messageType : 'std_msgs/Bool',
+  });
+  var bool = new ROSLIB.Message({data : boolean});
+  triggerPub1.publish(bool);
+}
+
+function perimeterPublisher(boolean){
+  var triggerPub1 = new ROSLIB.Topic({
+    ros : ros,
+    name : '/perimeter_constraint',
+    messageType : 'std_msgs/Bool',
+  });
+  var bool = new ROSLIB.Message({data : boolean});
+  triggerPub1.publish(bool);
+}
+
+
+
 $(document).ready(function() {
+    orientationPublisher(false);
+    heightPublisher(false);
+    overUnderPublisher(false);
+    perimeterPublisher(false);
+    console.log("Initialized all publishers to false");
     $('input[id=toggle1]').change(function() {
         if ($('input[id="toggle1"]').prop('checked') == true){
-            var triggerPub1 = new ROSLIB.Topic({
-              ros : ros,
-              name : '/upright_constraint',
-              messageType : 'std_msgs/Bool',
-            });
-            var bool = new ROSLIB.Message({data : true});
-            triggerPub1.publish(bool);
+            orientationPublisher(true);
         }
         if ($('input[id="toggle1"]').prop('checked') == false){
-            var triggerPub1 = new ROSLIB.Topic({
-              ros : ros,
-              name : '/upright_constraint',
-              messageType : 'std_msgs/Bool',
-            });
-            var bool = new ROSLIB.Message({data : false});
-            triggerPub1.publish(bool); 
-          }
+            orientationPublisher(false);
+        }
     });
     $('input[id=toggle2]').change(function() {
         if ($('input[id="toggle2"]').prop('checked') == true){
-          var triggerPub1 = new ROSLIB.Topic({
-              ros : ros,
-              name : '/height_constraint',
-              messageType : 'std_msgs/Bool',
-            });
-            var bool = new ROSLIB.Message({data : true});
-            triggerPub1.publish(bool);
+            heightPublisher(true);
           }
         if ($('input[id="toggle2"]').prop('checked') == false){
-          var triggerPub1 = new ROSLIB.Topic({
-              ros : ros,
-              name : '/height_constraint',
-              messageType : 'std_msgs/Bool',
-            });
-            var bool = new ROSLIB.Message({data : false});
-            triggerPub1.publish(bool);
+            heightPublisher(false);
           }
     });
     $('input[id=toggle3]').change(function() {
         if ($('input[id="toggle3"]').prop('checked') == true){
-          var triggerPub1 = new ROSLIB.Topic({
-              ros : ros,
-              name : '/over_under_constraint',
-              messageType : 'std_msgs/Bool',
-            });
-            var bool = new ROSLIB.Message({data : true});
-            triggerPub1.publish(bool);
-          }
+          overUnderPublisher(true);
+        }
         if ($('input[id="toggle3"]').prop('checked') == false){
-          var triggerPub1 = new ROSLIB.Topic({
-              ros : ros,
-              name : '/over_under_constraint',
-              messageType : 'std_msgs/Bool',
-            });
-            var bool = new ROSLIB.Message({data : false});
-            triggerPub1.publish(bool);   
-          }
+          overUnderPublisher(false);
+        }
     });
     $('input[id=toggle4]').change(function() {
       if ($('input[id="toggle4"]').prop('checked') == true){
-        var triggerPub1 = new ROSLIB.Topic({
-            ros : ros,
-            name : '/perimeter_constraint',
-            messageType : 'std_msgs/Bool',
-          });
-          var bool = new ROSLIB.Message({data : true});
-          triggerPub1.publish(bool);
+          perimeterPublisher(true);
         }
       if ($('input[id="toggle4"]').prop('checked') == false){
-        var triggerPub1 = new ROSLIB.Topic({
-            ros : ros,
-            name : '/perimeter_constraint',
-            messageType : 'std_msgs/Bool',
-          });
-          var bool = new ROSLIB.Message({data : false});
-          triggerPub1.publish(bool);   
+          perimeterPublisher(false);
         }
     });
      $('button[id=button1]').click(function() {
