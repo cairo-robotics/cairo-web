@@ -17,31 +17,31 @@
    <div class="containter" id="bigMama">
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
-                        <h5 class="card-title">Upright Constraint</h5>
-                        <p class="card-text">Restricts the cup to be held upright according to a predetermined orientation.</p>        
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts the robot to hold the lid level according to a predetermined orientation.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Upright Active" data-off="Upright Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#uprightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="uprightExample">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
-                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" id="card-height">
                     <div class="card-header">
-                        <h5 class="card-title">Height Constraint</h5>
-                        <p class="card-text">Restricts the cup to be held above a predetermined height.</p>
+                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                        <p class="card-text">Restricts the lid to be held above a predetermined height higher than the obstacles you must avoid.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
@@ -52,17 +52,17 @@
                         <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#heightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
                         <div class="collapse" id="heightExample">
                             <div class="card card-body">
-                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" id="card-over-under">
                     <div class="card-header">
-                        <h5 class="card-title">Over Under Constraint</h5>
-                        <p class="card-text">Restricts and object to be above the centerline of another object.</p>
+                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                        <p class="card-text">Restricts the lid to be above the vertical centerline of the  target square.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
@@ -73,7 +73,7 @@
                         <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnderExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
                         <div class="collapse" id="overUnderExample">
                             <div class="card card-body">
-                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>

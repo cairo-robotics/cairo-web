@@ -63,6 +63,38 @@ function perimeterPublisher(boolean){
 
 
 $(document).ready(function() {
+
+        var listener1 = new ROSLIB.Topic({
+      ros : ros,
+      name : '/cairo_lfd/valid_constraints',
+      messageType : 'std_msgs/Int16MultiArray',
+      throttle_rate : 2000
+    });
+
+    listener1.subscribe(function(message) {
+      console.log(message);
+      if (message.data.includes(1)){
+        $('#card-orientation').find('h5').removeClass('bg-danger').addClass('bg-success').addClass('text-white')
+      } else {
+        $('#card-orientation').find('h5').removeClass('bg-success').addClass('bg-danger').addClass('text-white')
+      }
+      if (message.data.includes(2)){
+        $('#card-height').find('h5').removeClass('bg-danger').addClass('bg-success').addClass('text-white')
+      } else {
+        $('#card-height').find('h5').removeClass('bg-success').addClass('bg-danger').addClass('text-white')
+      }
+      if (message.data.includes(3)){
+        $('#card-over-under').find('h5').removeClass('bg-danger').addClass('bg-success').addClass('text-white')
+      } else {
+        $('#card-over-under').find('h5').removeClass('bg-success').addClass('bg-danger').addClass('text-white')
+      }
+      if (message.data.includes(4)){
+        $('#card-perimeter').find('h5').removeClass('bg-danger').addClass('bg-success').addClass('text-white')
+      } else {
+        $('#card-perimeter').find('h5').removeClass('bg-success').addClass('bg-danger').addClass('text-white')
+      }
+    });
+
     orientationPublisher(false);
     heightPublisher(false);
     overUnderPublisher(false);

@@ -68,6 +68,39 @@ $(document).ready(function() {
     overUnderPublisher(false);
     perimeterPublisher(false);
     console.log("Initialized all publishers to false");
+
+    var listener1 = new ROSLIB.Topic({
+      ros : ros,
+      name : '/cairo_lfd/valid_constraints',
+      messageType : 'std_msgs/Int16MultiArray',
+      throttle_rate : 2000
+    });
+
+    listener1.subscribe(function(message) {
+      console.log(message);
+      console.log(message.includes('1'));
+      if (message.includes('1')){
+        $('#card-orientation').find('h5').removeClass('bg-danger').addClass('bg-success')
+      } else {
+        $('#card-orientation').find('h5').removeClass('bg-success').addClass('bg-danger')
+      }
+      if (message.includes('2')){
+        $('#card-height').find('h5').removeClass('bg-danger').addClass('bg-success')
+      } else {
+        $('#card-height').find('h5').removeClass('bg-success').addClass('bg-danger')
+      }
+      if (message.includes(1)){
+        $('#card-over-under').find('h5').removeClass('bg-danger').addClass('bg-success')
+      } else {
+        $('#card-over-under').find('h5').removeClass('bg-success').addClass('bg-danger')
+      }
+      if (message.includes(1)){
+        $('#card-perimeter').find('h5').removeClass('bg-danger').addClass('bg-success')
+      } else {
+        $('#card-perimeter').find('h5').removeClass('bg-success').addClass('bg-danger')
+      }
+    });
+
     $('input[id=toggle1]').change(function() {
         if ($('input[id="toggle1"]').prop('checked') == true){
             orientationPublisher(true);

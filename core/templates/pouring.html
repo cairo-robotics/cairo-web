@@ -9,7 +9,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Pouring Task</h1>
-            <p class="lead">In this task, you will demonstrate to the robot how place carry an cup and pour the contents into a target bowl.</p>
+            <p class="lead">In this task, you will demonstrate to the robot how carry a cup with packing material from a starting position and pour the contents into a target bowl.</p>
         </div>
     </div>
 {% endblock jumbotron %}
@@ -17,31 +17,31 @@
     <div class="containter" id="bigMama">
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
-                        <h5 class="card-title">Upright Constraint</h5>
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
                         <p class="card-text">Restricts the cup to be held upright according to a predetermined orientation.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Upright Active" data-off="Upright Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#uprightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="uprightExample">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
-                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" id="card-height">
                     <div class="card-header">
-                        <h5 class="card-title">Height Constraint</h5>
-                        <p class="card-text">Restricts the cup to be held above a pre-determined height.</p>
+                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                        <p class="card-text">Restricts the cup to be held above a pre-determined height higher than the obstacles you must avoid.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
@@ -52,7 +52,7 @@
                         <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#heightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
                         <div class="collapse" id="heightExample">
                             <div class="card card-body">
-                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -60,9 +60,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Over Under Constraint</h5>
-                        <p class="card-text">Restricts the cup to be position above the centerline of the target object.</p>
+                    <div class="card-header" id="card-over-under">
+                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                        <p class="card-text">Restricts the cup to be position above the vertical centerline of the target object.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
@@ -73,7 +73,7 @@
                         <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnderExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
                         <div class="collapse" id="overUnderExample">
                             <div class="card card-body">
-                                <img src="https://via.placeholder.com/150" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
