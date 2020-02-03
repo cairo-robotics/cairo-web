@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block jumbotron %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Purpose of the Study</h1>
+            <p class="lead">You might be asking, "What is this study all about?"</p>
+        </div>
+    </div>
+{% endblock jumbotron %}
+{% block content %}  
+    <div class="containter" id="bigMama">
+        <div class="container-fluid mx-auto" style="padding: 15px 30px">
+            <h3> Purpose of the Study</h3>
+            <br>
+            <p class="lead">Summary</p>
+            <p>The purpose of this study is to gain a better understanding of ...
+
+            <p class="lead">What will I be doing for each task?</p>
+
+            <ol>
+                <li><em>Pouring / Transferring Task</em>: In this task, you will kinesthetically demonstrate how the robot should carry a cup filled with contents (packing peanuts or something similar), move the arm over an obstacle, position the cup over a target, and pour out the contents into a target bowl.</li>
+                <br>
+                <li><em>Lid Placing Task</em>: In this task, you will kinesthetically demonstrate how the robot should place a lid / object correctly onto/into the center of an object/table. Two obstacles on either side of the target will require the end-effector to smoothly travel between the objects without knocking them over.</li>
+                <br>
+                <li><em>Cubby Task</em>: Describe the cubby task</li>
+            </ol>
+
+
+            <p class="lead">What is a Hololens and what is Augmented Reality?</p>
+            <p> Describe AR and the HOlolens</p>
+
+            <p class="lead">What is a "Conceptual Constraint"?</p>
+            <p>Traditionally, LfD methods record low-level data such as end-effector position and robot configuration (position of all the joints). Low-level data has limited information bandwidth for capturing important factors and abstract concepts essential to successful skill learning and execution. This study utilizes an algorithms that introduces ‘conceptual constraints’ to represent abstract restrictions on the behavior of the robot (e.g. keeping a pitcher upright until over a cup). The motive is to augment low-level robot state data with high-level abstract information such that the learned model much more closely resembles the 'true' representation of a task or skill.</p>
+
+            <p class="lead">How does Keyframe Learning from Demonstration work?</p>
+            <p>Keyframe LfD is a robot skill learning algorithm that takes data points of temporally aligned demonstration trajectories and clusters them into sequential groups across demonstrations. Through statistical modeling of the clusters into keyframes, these clusters can be used to generate waypoints that the robot follows sequentially to perform a skill. In CC-LfD, waypoints generated from the keyframe models pass through a rejection sampling filter where each point is evaluated with the constraints' Boolean operators assigned to the given keyframe.  This ensures the robot moves through a sequence of constraint-compliant waypoints. Consequently, we were able to show that robotic learning systems employing CC-LfD require far fewer demonstrations than standard Keyframe LfD to produce robust learned skills.</p>
+            <p>In CC-LfD, users were free to dictate when and where constraints must hold true during the demonstration of a task. The focal algorithm of this study is Autonomous Concept Constrained LfD (ACC-LfD), which automates this entirely human-driven selection and annotation of constraints while retaining the benefits of CC-LfD. This algorithm serves to substantially reduce the burden that constraint assignment places on the user during demonstration.</p>
+
+
+            <p class="lead">How long will this study take?</p>
+            <p> We expect that you will be in this research study for up to a total of two hours and forty minutes or less over two different days that will occur within two weeks of each other. We expect about 30 people will be in this research study, local to CU Boulder.</p>
+        </div>
+
+        
+
+    </div>
+{% endblock content %}

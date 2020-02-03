@@ -8,8 +8,8 @@
 {% block jumbotron %}
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Perimeter Task</h1>
-            <p class="lead">In this task, you will demonstrate to the robot how to perform an action around the perimeter of an object.</p>
+            <h1 class="display-4">Cubby Task</h1>
+            <p class="lead">In this task, you will demonstrate to the robot how move a plank / lid from a starting pad into a cubby across the table.</p>
         </div>
     </div>
 {% endblock jumbotron %}
@@ -19,12 +19,12 @@
             <div class="col-md-4">
                 <div class="card" id="card-orientation">
                     <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
-                        <p class="card-text">Restricts the tool to be held in the 'apply' orientation.</p>
+                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                        <p class="card-text">Restricts center of the lid to be held below the top edge of cubby box.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle15" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
@@ -38,19 +38,19 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card" id="card-height">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
-                        <p class="card-text">Restricts the tool to be held above the table height.</p>
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts end-effector to be in a orientation provided in the table to a predetermined orientation.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle16" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#heightExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="heightExample">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
                                 <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
@@ -59,19 +59,84 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card" id="card-perimeter">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Perimeter Constraint</h5>
-                        <p class="card-text">Restricts the tool to be within the band around the object.</p>
+                <div class="card">
+                    <div class="card-header" id="card-over-under">
+                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                        <p class="card-text">Restricts the cup to be position above the vertical centerline of the target object.</p>
                     </div>
                     <div class="card-body">
-                                                <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="lg" data-on="Perimeter Active" data-off="Perimeter Inactive">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle17" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#perimeterExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="perimeterExample">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnderExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="overUnderExample">
+                            <div class="card card-body">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" id="card-orientation">
+                    <div class="card-header">
+                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                        <p class="card-text">Restricts center of the lid to be held above the bottom edge of the cubby box.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle18" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
+                            <div class="card card-body">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-orientation">
+                    <div class="card-header">
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts the cup to be held upright according to a predetermined orientation.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle19" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
+                            <div class="card card-body">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-orientation">
+                    <div class="card-header">
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts the cup to be held upright according to a predetermined orientation.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle20" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
                                 <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>

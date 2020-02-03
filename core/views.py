@@ -6,8 +6,12 @@ class HomePageView(TemplateView):
     template_name = "home.html"
 
 
-class AboutPageView(TemplateView):
-    template_name = "about.html"
+class AboutACCLFDPageView(TemplateView):
+    template_name = "about_acclfd.html"
+
+
+class AboutAR4LFDPageView(TemplateView):
+    template_name = "about_ar4lfd.html"
 
 
 class PouringTaskPageView(TemplateView):
@@ -20,3 +24,7 @@ class PlacementTaskPageView(TemplateView):
 
 class PerimeterTaskPageView(TemplateView):
     template_name = "perimeter.html"
+
+
+class CubbyTaskPageView(TemplateView):
+    template_name = "cubby.html"

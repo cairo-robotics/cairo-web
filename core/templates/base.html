@@ -48,19 +48,26 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('home') }}">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('about') }}">About the Study</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Information
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{ url('about_acclfd') }}">Autonomous Concept Constrained LfD</a>
+                          <a class="dropdown-item" href="{{ url('about_ar4lfd') }}">Augmented Reality 4 LfD</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Tasks
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="{{ url('pouring') }}">Pouring</a>
-                      <a class="dropdown-item" href="{{ url('placement') }}">Placement</a>
-                      <a class="dropdown-item" href="{{ url('perimeter') }}">Perimeter</a>
-                    </div>
-                  </li>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Tasks
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{ url('pouring') }}">Pouring Task</a>
+                          <a class="dropdown-item" href="{{ url('placement') }}">Placement Task</a>
+                          <a class="dropdown-item" href="{{ url('cubby') }}">Cubby Task</a>
+                          <a class="dropdown-item" href="{{ url('perimeter') }}">Perimeter Task</a>
+                        </div>
+                    </li>
 
                 </ul>
                             <!--     <form class="form-inline my-2 my-lg-0">
