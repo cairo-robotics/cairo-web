@@ -2,7 +2,7 @@
 {% block title %}Home{% endblock title %}
 {% block head_css_page %}
     <link rel="stylesheet" href="{{ static('css/cairo_web.css') }}">
-    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">  
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
 {% endblock head_css_page %}
 {% block jumbotron %}
@@ -13,137 +13,137 @@
         </div>
     </div>
 {% endblock jumbotron %}
-{% block content %}  
+{% block content %}
     <div class="containter" id="bigMama">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card" id="card-planar-1">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
-                        <p class="card-text">The cup must be held above the top of the obstacle.</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Height Active" data-off="Height Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar13Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="planar13Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" id="card-orientation-3">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
-                        <p class="card-text">The cup must be held upright with 10 degrees of leniency.</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation15Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="orientation15Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header" id="card-over-under-5">
-                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
-                        <p class="card-text">The cup must be held right over the obstacle's center.</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle5" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder17Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="overUnder17Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="col-md-4">
+              <div class="card" id="card-planar-1">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                      <p class="card-text">The center of the cup must be held below the robot's screen.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle1" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar1Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="planar1Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/height_1.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" id="card-orientation-3">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                      <p class="card-text">The end-effector must hold the cup in an upright orientation.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation3Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="orientation3Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/orientation_3.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-header" id="card-over-under-5">
+                      <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                      <p class="card-text">The end-effector must hold the cup above the pouring goal position.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle5" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder5Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="overUnder5Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/over_under_5.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="card" id="card-planar-2">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
-                        <p class="card-text">The cup must be held at least one foot above the target bucket.</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="lg" data-on="Height Active" data-off="Height Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar14Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="planar14Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" id="card-orientation-4">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
-                        <p class="card-text">The cup must be held sideways with 10 degrees of leniency</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation16Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="orientation16Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" id="card-over-under-6">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
-                        <p class="card-text">The cup to be held directly over the target bucket.</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle6" data-size="lg" data-on="Over under Active" data-off="Over Under Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder18Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="overUnder18Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="col-md-4">
+              <div class="card" id="card-planar-2">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                      <p class="card-text">The center of the plank must be held above the top of the pouring goal.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar2Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="planar2Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/height_2.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" id="card-orientation-4">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                      <p class="card-text">The end-effector must hold the cup in a downward tilted orientation.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation4Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="orientation4Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/orientation_4.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-header" id="card-over-under-6">
+                      <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                      <p class="card-text">The end-effector must hold the cup above the starting position.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle6" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder6Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="overUnder6Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/over_under_6.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
 {% endblock content %}
@@ -154,7 +154,7 @@
     <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 {#     <script type="text/javascript" src="{{ static('js/cairo_web_rosbridge.js') }}"></script>
- #}    
+ #}
     <script type="text/javascript" src="{{ static('js/cairo_voice.js') }}"></script>
     <script type="text/javascript" src="{{ static('js/cairo_web.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
