@@ -11,6 +11,19 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+ENV_PATH = os.path.dirname(os.path.abspath(__file__)) + "/../.env"
+# reading .env file
+environ.Env.read_env(ENV_PATH)
+
+# False if not in os.environ
+ROSBRIDGE_WS_URL = env('ROSBRIDGE_WS_URL')
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

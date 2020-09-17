@@ -3,7 +3,7 @@ function sleep (time) {
 }
 
 var ros = new ROSLIB.Ros({
-  url : 'ws://192.168.50.125:9090'
+  url : ROSBRIDGE_ADDRESS
 });
 
 ros.on('connection', function() {

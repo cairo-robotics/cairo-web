@@ -33,6 +33,14 @@
         {% block head_css_section %}{% endblock head_css_section %}
         {% block head_css_page %}{% endblock head_css_page %}
     {% endblock head_css %}
+    {% block head_javascript%}
+        {% block javascript_environment_variables %}
+            <script type="text/javascript">
+                var ROSBRIDGE_ADDRESS = "{{ROSBRIDGE_WS_URL}}";
+                console.log(`Rosbridge Websocket URL: ${ROSBRIDGE_ADDRESS}`);
+            </script>
+        {% endblock javascript_environment_variables %}
+    {% endblock head_javascript%}
 </head>
 
 <body>
