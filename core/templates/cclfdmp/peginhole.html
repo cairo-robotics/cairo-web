@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block head_css_page %}
+    <link rel="stylesheet" href="{{ static('css/cairo_web.css') }}">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+{% endblock head_css_page %}
+{% block jumbotron %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Cubby Task</h1>
+            <p class="lead">In this task, you will demonstrate to the robot how move a plank / lid from a starting pad into a cubby across the table.</p>
+        </div>
+    </div>
+{% endblock jumbotron %}
+{% block content %}  
+    <div class="containter" id="bigMama">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" id="card-orientation-4">
+                    <div class="card-header">
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts center of the lid to be held below the top edge of cubby box.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
+                            <div class="card card-body">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-over-under-5">
+                    <div class="card-header">
+                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                        <p class="card-text">Restricts end-effector to be in a orientation provided in the table to a predetermined orientation.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle5" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
+                            <div class="card card-body">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block footer_javascript_page %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+{#     <script type="text/javascript" src="{{ static('js/cairo_web_rosbridge.js') }}"></script>
+ #}    
+    <script type="text/javascript" src="{{ static('js/cairo_voice.js') }}"></script>
+    <script type="text/javascript" src="{{ static('js/cclfdmp.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+{% endblock footer_javascript_page %}

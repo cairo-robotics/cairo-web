@@ -38,14 +38,14 @@
               </div>
           </div>
           <div class="col-md-4">
-              <div class="card" id="card-orientation-3">
+              <div class="card" id="card-orientation-2">
                   <div class="card-header">
                       <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
                       <p class="card-text">The end-effector must hold the cup in an upright orientation.</p>
                   </div>
                   <div class="card-body">
                       <div class="form-check form-check-inline">
-                        <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                       </div>
                   </div>
                   <div class="card-footer">
@@ -60,13 +60,13 @@
           </div>
           <div class="col-md-4">
               <div class="card">
-                  <div class="card-header" id="card-over-under-5">
+                  <div class="card-header" id="card-over-under-3">
                       <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
                       <p class="card-text">The end-effector must hold the cup above the pouring goal position.</p>
                   </div>
                   <div class="card-body">
                       <div class="form-check form-check-inline">
-                        <input type="checkbox" data-toggle="toggle" id="toggle5" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
+                        <input type="checkbox" data-toggle="toggle" id="toggle3" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
                       </div>
                   </div>
                   <div class="card-footer">
@@ -74,71 +74,6 @@
                       <div class="collapse" id="overUnder5Example">
                           <div class="card card-body">
                               <img src="{{ static('img/over_under_5.jpg') }}" class="img-fluid" alt="">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-              <div class="card" id="card-planar-2">
-                  <div class="card-header">
-                      <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
-                      <p class="card-text">The center of the plank must be held above the top of the pouring goal.</p>
-                  </div>
-                  <div class="card-body">
-                      <div class="form-check form-check-inline">
-                        <input type="checkbox" data-toggle="toggle" id="toggle2" data-size="lg" data-on="Height Active" data-off="Height Inactive">
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar2Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                      <div class="collapse" id="planar2Example">
-                          <div class="card card-body">
-                              <img src="{{ static('img/height_2.jpg') }}" class="img-fluid" alt="">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="card" id="card-orientation-4">
-                  <div class="card-header">
-                      <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
-                      <p class="card-text">The end-effector must hold the cup in a downward tilted orientation.</p>
-                  </div>
-                  <div class="card-body">
-                      <div class="form-check form-check-inline">
-                        <input type="checkbox" data-toggle="toggle" id="toggle4" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation4Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                      <div class="collapse" id="orientation4Example">
-                          <div class="card card-body">
-                              <img src="{{ static('img/orientation_4.jpg') }}" class="img-fluid" alt="">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="card">
-                  <div class="card-header" id="card-over-under-6">
-                      <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
-                      <p class="card-text">The end-effector must hold the cup above the starting position.</p>
-                  </div>
-                  <div class="card-body">
-                      <div class="form-check form-check-inline">
-                        <input type="checkbox" data-toggle="toggle" id="toggle6" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder6Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                      <div class="collapse" id="overUnder6Example">
-                          <div class="card card-body">
-                              <img src="{{ static('img/over_under_6.jpg') }}" class="img-fluid" alt="">
                           </div>
                       </div>
                   </div>
@@ -156,6 +91,6 @@
 {#     <script type="text/javascript" src="{{ static('js/cairo_web_rosbridge.js') }}"></script>
  #}
     <script type="text/javascript" src="{{ static('js/cairo_voice.js') }}"></script>
-    <script type="text/javascript" src="{{ static('js/cairo_web.js') }}"></script>
+    <script type="text/javascript" src="{{ static('js/cclfdmp.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 {% endblock footer_javascript_page %}

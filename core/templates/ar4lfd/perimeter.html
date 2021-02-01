@@ -17,31 +17,10 @@
     <div class="containter" id="bigMama">
         <div class="row">
             <div class="col-md-4">
-                <div class="card" id="card-planar-13">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
                         <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
-                        <p class="card-text">The center of the plank must be held below the <em>stripped</em> blue tape on the cubby.</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle13" data-size="lg" data-on="Height Active" data-off="Height Inactive">
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar13Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="planar13Example">
-                            <div class="card card-body">
-                                <img src="{{ static('img/height_13.jpg') }}" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" id="card-orientation-15">
-                    <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
-                        <p class="card-text">The end-effector must hold the plank horizontally lengthwise relative to the table.</p>
+                        <p class="card-text">Restricts center of the lid to be held below the top edge of cubby box.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
@@ -49,10 +28,31 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation15Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="orientation15Example">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
-                                <img src="{{ static('img/orientation_15.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-orientation">
+                    <div class="card-header">
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts end-effector to be in a orientation provided in the table to a predetermined orientation.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" data-toggle="toggle" id="toggle16" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
+                            <div class="card card-body">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -60,9 +60,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header" id="card-over-under-17">
+                    <div class="card-header" id="card-over-under">
                         <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
-                        <p class="card-text">The end-effector must hold the plank above the center of the starting position.</p>
+                        <p class="card-text">Restricts the cup to be position above the vertical centerline of the target object.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
@@ -70,10 +70,10 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder17Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="overUnder17Example">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnderExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="overUnderExample">
                             <div class="card card-body">
-                                <img src="{{ static('img/over_under_17.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -82,63 +82,63 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="card" id="card-planar-14">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
                         <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
-                        <p class="card-text">The center of the plank must be held above the <em>non-stripped</em> blue tape on the cubby.</p>
+                        <p class="card-text">Restricts center of the lid to be held above the bottom edge of the cubby box.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle14" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle18" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar14Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="planar14Example">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
-                                <img src="{{ static('img/height_14.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card" id="card-orientation-16">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
                         <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
-                        <p class="card-text">The end-effector must hold the plank vertically lengthwise relative to the table.</p>
+                        <p class="card-text">Restricts the cup to be held upright according to a predetermined orientation.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle16" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle19" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation16Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="orientation16Example">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
-                                <img src="{{ static('img/orientation_16.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card" id="card-over-under-18">
+                <div class="card" id="card-orientation">
                     <div class="card-header">
-                        <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
-                        <p class="card-text">The end-effector must hold the plank vertically above the cubby's center.</p>
+                        <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                        <p class="card-text">Restricts the cup to be held upright according to a predetermined orientation.</p>
                     </div>
                     <div class="card-body">
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" data-toggle="toggle" id="toggle18" data-size="lg" data-on="Over under Active" data-off="Over Under Inactive">
+                          <input type="checkbox" data-toggle="toggle" id="toggle20" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder18Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
-                        <div class="collapse" id="overUnder18Example">
+                        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientationExample" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                        <div class="collapse" id="orientationExample">
                             <div class="card card-body">
-                                <img src="{{ static('img/over_under_18.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ static('img/experiment.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -156,6 +156,6 @@
 {#     <script type="text/javascript" src="{{ static('js/cairo_web_rosbridge.js') }}"></script>
  #}    
     <script type="text/javascript" src="{{ static('js/cairo_voice.js') }}"></script>
-    <script type="text/javascript" src="{{ static('js/cairo_web.js') }}"></script>
+    <script type="text/javascript" src="{{ static('js/ar4lfd.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 {% endblock footer_javascript_page %}

@@ -19,22 +19,35 @@ class HomePageView(BaseTemplateView):
 class AboutACCLFDPageView(BaseTemplateView):
     template_name = "about_acclfd.html"
 
-
-class AboutAR4LFDPageView(BaseTemplateView):
-    template_name = "about_ar4lfd.html"
-
-
-class PouringTaskPageView(BaseTemplateView):
-    template_name = "pouring.html"
+# AR4LfD Pages
+class AR4LFDAboutPageView(BaseTemplateView):
+    template_name = "ar4lfd/about_ar4lfd.html"
 
 
-class PlacementTaskPageView(BaseTemplateView):
-    template_name = "placement.html"
+class AR4LFDPouringTaskPageView(BaseTemplateView):
+    template_name = "ar4lfd/pouring.html"
 
 
-class PerimeterTaskPageView(BaseTemplateView):
-    template_name = "perimeter.html"
+class AR4LFDPlacementTaskPageView(BaseTemplateView):
+    template_name = "ar4lfd/placement.html"
 
 
-class CubbyTaskPageView(BaseTemplateView):
-    template_name = "cubby.html"
+class AR4LFDPerimeterTaskPageView(BaseTemplateView):
+    template_name = "ar4lfd/perimeter.html"
+
+
+class AR4LFDCubbyTaskPageView(BaseTemplateView):
+    template_name = "ar4lfd/cubby.html"
+
+# CCLfD Motion Planning Pages
+
+class CCLfDMPPouringTaskPageView(BaseTemplateView):
+    template_name = "cclfdmp/pouring.html"
+
+
+class CCLfDMPGlueTaskPageView(BaseTemplateView):
+    template_name = "cclfdmp/glue.html"
+
+
+class CCLfDMPPenInHoleTaskPageView(BaseTemplateView):
+    template_name = "cclfdmp/peginhole.html"

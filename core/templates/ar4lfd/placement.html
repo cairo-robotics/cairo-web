@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block head_css_page %}
+    <link rel="stylesheet" href="{{ static('css/cairo_web.css') }}">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+{% endblock head_css_page %}
+{% block jumbotron %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Placement Task</h1>
+            <p class="lead">In this task, you will demonstrate to the robot how place a lid onto a designated rectangle on the table while navigating through an obstacle.</p>
+        </div>
+    </div>
+{% endblock jumbotron %}
+{% block content %}
+    <div class="containter" id="bigMama">
+        <div class="row">
+          <div class="col-md-4">
+              <div class="card" id="card-planar-7">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                      <p class="card-text">The center of the plank must be held below the robot's screen.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle7" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar7Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="planar7Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/height_7.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" id="card-orientation-9">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                      <p class="card-text">The end-effector must hold the plank in the target's orientation.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle9" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation9Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="orientation9Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/orientation_9.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-header" id="card-over-under-11">
+                      <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                      <p class="card-text">The end-effector must hold the plank above the center of the target position.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle11" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder11Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="overUnder11Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/over_under_11.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+              <div class="card" id="card-planar-8">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Height Constraint</h5>
+                      <p class="card-text">The center of the plank must be held above the top of the foam obstacles.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle8" data-size="lg" data-on="Height Active" data-off="Height Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#planar8Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="planar8Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/height_8.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" id="card-orientation-10">
+                  <div class="card-header">
+                      <h5 class="card-title text-white bg-secondary">Orientation Constraint</h5>
+                      <p class="card-text">The end-effector must hold the plank in its starting orientation.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle10" data-size="lg" data-on="Orientation Active" data-off="Orientation Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#orientation10Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="orientation10Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/orientation_10.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-header" id="card-over-under-12">
+                      <h5 class="card-title text-white bg-secondary">Over Under Constraint</h5>
+                      <p class="card-text">The end-effector must hold the plank above the center of the starting position.</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" data-toggle="toggle" id="toggle12" data-size="lg" data-on="Over Under Active" data-off="Over Under Inactive">
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#overUnder12Example" aria-expanded="false" aria-controls="collapseExample"> Example </button>
+                      <div class="collapse" id="overUnder12Example">
+                          <div class="card card-body">
+                              <img src="{{ static('img/over_under_12.jpg') }}" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block footer_javascript_page %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script type="text/javascript" src="{{ static('js/cairo_voice.js') }}"></script>
+    <script type="text/javascript" src="{{ static('js/ar4lfd.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+{% endblock footer_javascript_page %}

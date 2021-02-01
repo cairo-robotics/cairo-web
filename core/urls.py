@@ -4,9 +4,12 @@ from core import views
 urlpatterns = [
     url(r'^$', views.HomePageView.as_view(), name='home'),
     url(r'about_acclfd', views.AboutACCLFDPageView.as_view(), name='about_acclfd'),
-    url(r'about_ar4lfd', views.AboutAR4LFDPageView.as_view(), name='about_ar4lfd'),
-    url(r'pouring', views.PouringTaskPageView.as_view(), name='pouring'),
-    url(r'placement', views.PlacementTaskPageView.as_view(), name='placement'),
-    url(r'perimeter', views.PerimeterTaskPageView.as_view(), name='perimeter'),
-    url(r'cubby', views.CubbyTaskPageView.as_view(), name='cubby')
+    url(r'ar4lfd_about', views.AR4LFDAboutPageView.as_view(), name='ar4lfd_about'),
+    url(r'ar4lfd_pouring', views.AR4LFDPouringTaskPageView.as_view(), name='ar4lfd_pouring'),
+    url(r'ar4lfd_placement', views.AR4LFDPlacementTaskPageView.as_view(), name='ar4lfd_placement'),
+    url(r'ar4lfd_perimeter', views.AR4LFDPerimeterTaskPageView.as_view(), name='ar4lfd_perimeter'),
+    url(r'ar4lfd_cubby', views.AR4LFDCubbyTaskPageView.as_view(), name='ar4lfd_cubby'),
+    url(r'cclfdmp_pouring', views.CCLfDMPPouringTaskPageView.as_view(), name='cclfdmp_pouring'),
+    url(r'cclfdmp_glue', views.CCLfDMPGlueTaskPageView.as_view(), name='cclfdmp_glue'),
+    url(r'cclfdmp_peginhole', views.CCLfDMPPenInHoleTaskPageView.as_view(), name='cclfdmp_peginhole')
 ]
