@@ -51,3 +51,10 @@ class CCLfDMPGlueTaskPageView(BaseTemplateView):
 
 class CCLfDMPPenInHoleTaskPageView(BaseTemplateView):
     template_name = "cclfdmp/peginhole.html"
+
+# IPD Relax
+class IPDRelaxAboutPageView(BaseTemplateView):
+    template_name = "ipdrelax/ipdrelax_about.html"
+
+class IPDRelaxPouringTaskPageView(BaseTemplateView):
+    template_name = "ipdrelax/pouring.html"

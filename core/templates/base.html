@@ -46,73 +46,6 @@
     {# Navigation Menu #}
 <header>
 
-<!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Cairo LfD UI</a>
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-        
-            <!-- Dropdown -->
-            <li class="nav-item dropdown multi-level-dropdown">
-              <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Dropdown</a>
-              <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
-                <li class="dropdown-item dropdown-submenu p-0">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Click Me Too! </a>
-                  <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
-                    <li class="dropdown-item p-0">
-                      <a href="#" class="text-white w-100">Hey</a>
-                    </li>
-                    <li class="dropdown-item p-0">
-                      <a href="#" class="text-white w-100">Hi</a>
-                    </li>
-                    <li class="dropdown-item dropdown-submenu p-0">
-                      <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Hello </a>
-                      <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
-                        <li class="dropdown-item p-0">
-                          <a href="#" class="text-white w-100">Some</a>
-                        </li>
-                        <li class="dropdown-item p-0">
-                          <a href="#" class="text-white w-100">Text</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="dropdown-item dropdown-submenu">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Click me </a>
-                  <ul class="dropdown-menu mr-2 rounded-0  primary-color border-0 z-depth-1 r-100 ">
-                    <li class="dropdown-item p-0">
-                      <a href="#" class="text-white w-100">How</a>
-                    </li>
-                    <li class="dropdown-item p-0">
-                      <a href="#" class="text-white w-100">are</a>
-                    </li>
-                    <li class="dropdown-item p-0">
-                      <a href="#" class="text-white w-100">you </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <!-- Links -->
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-        <!-- Collapsible content -->
-      </nav>
-
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <a href="{{ url('home') }}" class="navbar-brand font-weight-bold">Cairo Experiment Interfaces</a>
@@ -129,6 +62,7 @@
                     <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ url('about_acclfd') }}">Autonomous Concept Constrained LfD</a></li>
                         <li><a class="dropdown-item" href="{{ url('ar4lfd_about') }}">Augmented Reality 4 LfD</a></li>
+                        <li><a class="dropdown-item" href="{{ url('ipdrelax_about') }}">IPD Relaxation</a></li>
                     </ul>
                 </li>
                     <!-- End Level one -->
@@ -138,42 +72,59 @@
                     <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
                         <!-- Level two dropdown-->
                         <li class="dropdown-submenu ">
-                        <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">AR 4 LfD</a>
-                        <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
-                            <li><a tabindex="-1" class="dropdown-item" href="{{ url('ar4lfd_pouring') }}">Pouring Task</a></li>
-                            <li><a class="dropdown-item" href="{{ url('ar4lfd_placement') }}">Placement Task</a></li>
-                            <li><a class="dropdown-item" href="{{ url('ar4lfd_cubby') }}">Cubby Task</a></li>
-                            <li><a class="dropdown-item" href="{{ url('ar4lfd_perimeter') }}">Perimeter Task</a></li>
+                          <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">AR 4 LfD</a>
+                          <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
+                              <li><a tabindex="-1" class="dropdown-item" href="{{ url('ar4lfd_pouring') }}">Pouring Task</a></li>
+                              <li><a class="dropdown-item" href="{{ url('ar4lfd_placement') }}">Placement Task</a></li>
+                              <li><a class="dropdown-item" href="{{ url('ar4lfd_cubby') }}">Cubby Task</a></li>
+                              <li><a class="dropdown-item" href="{{ url('ar4lfd_perimeter') }}">Perimeter Task</a></li>
 
-                            <!-- Level three dropdown
-                            <li class="dropdown-submenu">
-                            <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
-                            <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
-                                <li><a href="#" class="dropdown-item">3rd level</a></li>
-                                <li><a href="#" class="dropdown-item">3rd level</a></li>
-                            </ul>
-                            </li>
-                            -->
-                        </ul>
+                              <!-- Level three dropdown
+                              <li class="dropdown-submenu">
+                              <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                              <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                                  <li><a href="#" class="dropdown-item">3rd level</a></li>
+                                  <li><a href="#" class="dropdown-item">3rd level</a></li>
+                              </ul>
+                              </li>
+                              -->
+                          </ul>
                         </li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-submenu pull-right">
-                                <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CCLfD MP</a>
-                                <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
-                                    <li><a tabindex="-1" class="dropdown-item" href="{{ url('cclfdmp_pouring') }}">Pouring Task</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('cclfdmp_peginhole') }}">Peg-in-Hole Task</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('cclfdmp_glue') }}">Glue Application Task</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-submenu pull-right">
+                          <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CCLfD MP</a>
+                          <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
+                              <li><a tabindex="-1" class="dropdown-item" href="{{ url('cclfdmp_pouring') }}">Pouring Task</a></li>
+                              <li><a class="dropdown-item" href="{{ url('cclfdmp_peginhole') }}">Peg-in-Hole Task</a></li>
+                              <li><a class="dropdown-item" href="{{ url('cclfdmp_glue') }}">Glue Application Task</a></li>
 
-                                    <!-- Level three dropdown
-                                    <li class="dropdown-submenu">
-                                    <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
-                                    <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
-                                        <li><a href="#" class="dropdown-item">3rd level</a></li>
-                                        <li><a href="#" class="dropdown-item">3rd level</a></li>
-                                    </ul>
-                                    </li>
-                                    -->
-                                </ul>
+                              <!-- Level three dropdown
+                              <li class="dropdown-submenu">
+                              <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                              <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                                  <li><a href="#" class="dropdown-item">3rd level</a></li>
+                                  <li><a href="#" class="dropdown-item">3rd level</a></li>
+                              </ul>
+                              </li>
+                              -->
+                          </ul>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-submenu pull-right">
+                          <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">IPD Relaxation</a>
+                          <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
+                              <li><a tabindex="-1" class="dropdown-item" href="{{ url('ipdrelax_pouring') }}">Pouring Task</a></li>
+
+                              <!-- Level three dropdown
+                              <li class="dropdown-submenu">
+                              <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                              <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                                  <li><a href="#" class="dropdown-item">3rd level</a></li>
+                                  <li><a href="#" class="dropdown-item">3rd level</a></li>
+                              </ul>
+                              </li>
+                              -->
+                          </ul>
                         </li>
                     </ul>
                 </li>

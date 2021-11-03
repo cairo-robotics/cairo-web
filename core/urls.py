@@ -11,5 +11,7 @@ urlpatterns = [
     url(r'ar4lfd_cubby', views.AR4LFDCubbyTaskPageView.as_view(), name='ar4lfd_cubby'),
     url(r'cclfdmp_pouring', views.CCLfDMPPouringTaskPageView.as_view(), name='cclfdmp_pouring'),
     url(r'cclfdmp_glue', views.CCLfDMPGlueTaskPageView.as_view(), name='cclfdmp_glue'),
-    url(r'cclfdmp_peginhole', views.CCLfDMPPenInHoleTaskPageView.as_view(), name='cclfdmp_peginhole')
+    url(r'cclfdmp_peginhole', views.CCLfDMPPenInHoleTaskPageView.as_view(), name='cclfdmp_peginhole'),
+    url(r'ipdrelax_about', views.IPDRelaxAboutPageView.as_view(), name='ipdrelax_about'),
+    url(r'ipdrelax_pouring', views.IPDRelaxPouringTaskPageView.as_view(), name='ipdrelax_pouring')
 ]
