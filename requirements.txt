@@ -143,7 +143,7 @@ systemd-python==234
 tinycss2==1.0.2
 tldextract==2.2.1
 tornado==5.1.1
-Twisted==18.9.0
+Twisted==22.1.0
 txaio==2.10.0
 u-msgpack-python==2.1
 ubuntu-advantage-tools==27.2
