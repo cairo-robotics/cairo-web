@@ -73,7 +73,7 @@ packaging==20.3
 PAM==0.4.2
 paramiko==2.6.0
 pexpect==4.6.0
-Pillow==7.0.0
+Pillow==9.3.0
 protobuf==3.6.1
 psutil==5.5.1
 py-ubjson==0.14.0
